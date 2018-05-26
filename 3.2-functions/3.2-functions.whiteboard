@@ -1,0 +1,196 @@
+[deck]
+readonly = true
+cssfile = ../basestyle.css
+
+[slide]
+title=Kickstart Coding - Day 8
+
+[slide]
+title=Functions
+
+[slide]
+title=So Git....
+
+[slide]
+title=Happy and frustration free
+markdown : '''
+![climbing](file://./images/wizard_of_oz.gif)
+'''
+
+[slide]
+title=Totally fine
+markdown : '''
+![climbing](file://./images/this_is_fine.jpg)
+'''
+
+
+[slide]
+title = Frustration is expected
+markdown : '''
+* Step 1: Accept frustration as part of learning
+    * Coding frustration DOES NOT GO AWAY
+
+* Step 2: Don't be alone
+    * Form a study group. Meet on off days.
+
+* Step 3: Fight impostor syndrome
+    * Impostor syndrome DOES NOT GO AWAY
+'''
+
+[slide]
+title = Frustration is expected
+markdown : '''
+* Protips
+    * Redo the in-class activities outside of class
+    * Read ahead the recommended online text-book reading
+
+* If/when you need more help:
+    * Come to study lounge
+    * Ask other students
+    * Ask us on Chat
+'''
+
+
+[slide]
+title=Remember - Hang in there!
+markdown : '''
+You are learning 4 years in 4 months.
+
+* It's hard. But you can do it!
+
+* Ask questions. Study ahead.
+
+* *Code and practice every day*
+
+* You are learning a new way of thinking, your brain isn't used to this much
+  change at once.
+'''
+
+
+[slide]
+title=ACTIVITY 1 - python review
+editor=./activities/1_python_review.py
+
+
+[slide]
+title=SOLUTION 1 - python review
+editor=./solutions/4_python_review_solution.py
+terminal=./solutions/
+
+
+[slide]
+title=Functions
+markdown : '''
+### KEY TERMS
+* DRY - Don't Repeat Yourself
+* function - a bit of code that can be reused
+* invoke - aka "to call", causing the code within a function to be run
+'''
+
+[slide]
+title=DEMO 1 - functions
+editor=./demos/functions.py
+terminal=./demos/
+
+[slide]
+title=ACTIVITY 2 - functions
+editor=./activities/2_functions.py
+
+
+[slide]
+title=SOLUTION 2 - functions
+editor=./solutions/2_functions.py
+terminal=./solutions/
+
+
+
+[slide]
+title=Parameters
+markdown : '''
+We can insert variable values into the function when we are invoking them with
+`parameters` and `arguments`.
+
+### KEY TERMS
+* parameters - a type of variable associated with a function
+* arguments - when calling a function, we can re-assign parameters
+* default - if a parameter is not specified, then it gets a "default" value
+'''
+
+[slide]
+title=DEMO 2 - parameters
+editor=./demos/functions.py
+terminal=./demos/
+
+[slide]
+title=ACTIVITY 3 - parameters
+editor=./activities/3_parameters.py
+
+
+[slide]
+title=SOLUTION 3 - parameters
+editor=./solutions/3_parameters.py
+terminal=./solutions/
+
+
+[slide]
+title=Positional arguments
+markdown : '''
+We can also have parameters that have a certain order, and don't need the
+`name="value"` syntax when we are invoking the function.
+
+We can let data "escape" the function also, via a "return" statement.
+
+### KEY TERMS:
+* positional arguments - arguments specified by position
+* keyword arguments - named arguments specified by assignment syntax
+* return statement - tells the function to end, while "outputting" a value
+* return value - data exiting a function
+'''
+
+
+
+[slide]
+title=DEMO 3 - return
+editor=./demos/functions.py
+terminal=./demos/
+
+[slide]
+title=ACTIVITY 4 - positional return
+editor=./activities/4_positional_return.py
+
+
+[slide]
+title=SOLUTION 4 - positional return
+editor=./solutions/4_positional_return.py
+terminal=./solutions/
+
+[slide]
+title=Sneak Peak at OOP
+
+[slide]
+title=Sneak Peak at OOP
+markdown : '''
+All this time we have been OOPing.
+
+### KEY TERMS:
+* object oriented programming - "OOP", a paradigm of organizing our functions
+  (and data into) into classes
+* class - another way to call a "data-type"
+* method - a function within a class or data-type
+'''
+
+
+[slide]
+title=ACTIVITY 5 - methods
+editor=./activities/5_methods.py
+
+
+[slide]
+title=SOLUTION 5 - methods
+editor=./solutions/5_methods.py
+terminal=./solutions/
+
+
+
+
+
