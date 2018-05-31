@@ -14,6 +14,15 @@ print('Challenge 1 -------------')
 # Uncomment and examine the following code. See if you can explain what every
 # line is doing.
 
+def patient_initialize(patient, first_name, last_name):
+    patient['first_name'] = first_name
+    patient['last_name'] = last_name
+    patient['is_checked_in'] = False
+
+patient = {}
+# patient_initialize(patient)
+print(patient)
+
 print('Challenge 2 -------------')
 # Challenge 2:
 # Rewrite patient_initialize so that it has 2 more arguments: first_name, and
@@ -21,19 +30,13 @@ print('Challenge 2 -------------')
 # yourself and the student sitting next to you. Use print statements to confirm
 # that your function is working correctly.
 
+eric = {}
+patient_initialize(eric, 'Eric', 'Idle')
+print('Eric', eric)
+terry = {}
+patient_initialize(terry, 'Terry', 'Gilliam')
+print('Terry', terry)
 
-
-# def patient_initialize(patient, first_name, last_name):
-#     patient['first_name'] = first_name
-#     patient['last_name'] = last_name
-#     patient['is_checked_in'] = False
-#
-# shane = {}
-# patient_initialize(shane, 'Shane', 'LeBlanc')
-# print(shane)
-#
-# patient_initialize(shakur, 'Shakur', 'Ahmed')
-# print(shakur)
 
 print('Challenge 3 -------------')
 # Challenge 3:
@@ -41,15 +44,14 @@ print('Challenge 3 -------------')
 # patient dictionary as an argument. and then modify that argument to make
 # "is_checked_in" set to be True.
 # Again, use print to verify it's working.
+
 def patient_check_in(patient):
     patient['is_checked_in'] = True
-shane = {}
-#patient_check_in(shane)
-print(shane)
 
-
-
-
+patient_check_in(eric)
+print('Eric', eric)
+patient_check_in(terry)
+print('Terry', terry)
 
 
 print('Challenge 4 -------------')
@@ -57,7 +59,7 @@ print('Challenge 4 -------------')
 # Write a new function called "patient_nurse_check_up". It should take a
 # patient dictionary as an argument. It should then ask the following
 # questions. It can be by using input() and storing the result in separate
-# variables or items in the dictionary.
+# variables.
 #     1. Does the patient smoke?
 #     2. Does the patient drink?
 #     3. Patient blood-pressure?
@@ -66,15 +68,14 @@ print('Challenge 4 -------------')
 # Again, use print to verify it's working.
 
 def patient_nurse_check_up(patient):
-    patient['smokes'] = input('Does the patient smoke?')
-    patient['drinks'] = input('Does the patient drink?')
-    patient['bp'] = int(input('Patient blood pressure?'))
-    patient['seen_nurse'] = True
+    patient['does_smoke'] = input('Does the patient smoke? ')
+    patient['does_drink'] = input('Does the patient drink? ')
+    patient['blood_pressure'] = int(input('Patient blood-pressure? '))
 
-#patient_nurse_check_up(shane)
-
-print(shane)
-
+#patient_nurse_check_up(eric)
+#print('Eric', eric)
+#patient_nurse_check_up(terry)
+#print('Terry', terry)
 
 
 
@@ -87,45 +88,72 @@ print('Challenge 5 -------------')
 # to "process" the patient.
 # Hint: Feel free to comment out the previous invocations of the above function
 # Add a prints as needed to report back on the process.
-def patient_initialize(first_name, last_name):
-    patient = {}
-    patient['first_name'] = first_name
-    patient['last_name'] = last_name
-    return patient
 
-def patient_visit():
-    patient = patient_initialize(input('First name?'), input('Last name?'))
+
+def patient_visit(patient):
+    first_name = input('First name? ')
+    last_name = input('Last name? ')
+    patient_initialize(patient, first_name, last_name)
     patient_check_in(patient)
     patient_nurse_check_up(patient)
-    return patient
 
-#print(patient_visit())
+patient = {}
+patient_visit(patient)  # Disabled due to bonus challenge 1
 
 print('-------------')
 # Bonus Challenge 1:
 # Create another function called "patient_doctor_diagnose". It should only
 # accept patients who have already been checked in and visited a nurse. It
-# should allow a doctor to enter a "diagnosis" and "recommendation".
-#
-# 1. Check that blood-pressure is below 120. If between 120-130 it should
-#    diagnose "Stage 1 Hypertension", if between 130-180 "Stage 2 Hypertension"
-# 2. Recommend the patient a) visit the ER if blood pressure is above 180, or
-#    b) if the patient smokes, recommend the patient stop.
+# should allow a doctor to enter a "diagnosis".
 
 def patient_doctor_diagnose(patient):
-    if patient['seen_nurse'] == True:
-        print('Doctor: Hello, ', patient['first_name'])
-    if 180 > patient['bp'] > 130:
-        print('Doctor: '+ patient['first_name'] + ', this doesn\'t look good... u got stage 2 hypertension')
-    if 130 > patient['bp'] > 120:
-        print('Doctor: '+ patient['first_name'] + ', it\'s only stage 1 hypertension, smoke on pal')
-patient_doctor_diagnose(patient_visit())
+    if not patient['is_checked_in']:
+        print('Need to check in first.')
+        return
+    if 'blood_pressure' not in patient:
+        print('Patient must visit nurse first')
+        return
 
+    patient['recommendation'] = ''
+    patient['diagnosis'] = ''
+    if patient['does_smoke'] == 'yes':
+        patient['recommendation'] = 'Quitting smoking.'
 
+    if patient['blood_pressure'] > 180:
+        patient['diagnosis'] = 'Hypertension Crisis'
+        patient['recommendation'] = 'Immediate treatment in ER'
+    elif patient['blood_pressure'] > 140:
+        patient['diagnosis'] = 'Stage 2 Hypertension'
+    elif patient['blood_pressure'] > 130:
+        patient['diagnosis'] = 'Stage 1 Hypertension'
 
+    extra_notes = input('Extra physician notes? ')
+    patient['extra_notes'] = extra_notes
+    print('----- RESULTS -----')
+    print(patient)
 
+patient_doctor_diagnose(patient)
 
 print('-------------')
 # Bonus Challenge 2:
 # Where does our data go? At the end of every check up, we should store it in a
 # file. Maybe use JSON, or CSV?
+
+import csv
+def store_to_file(patient):
+    # Get read to save patient into given CSV file
+    opened_file = open('patient.csv', 'w+')
+    csv_writer = csv.writer(opened_file)
+
+    # Use this technique with the "zip" function to extract the keys and values
+    # from the dictionary. This ensures they have the same order (as opposed to
+    # using keys and values independently)
+    keys, values = zip(*patient.items())
+
+    # Write the headers
+    csv_writer.writerow(keys)
+    # And write the values
+    csv_writer.writerow(values)
+store_to_file(patient)
+
+

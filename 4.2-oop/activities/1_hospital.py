@@ -14,6 +14,15 @@ print('Challenge 1 -------------')
 # Uncomment and examine the following code. See if you can explain what every
 # line is doing.
 
+def patient_initialize(patient):
+    patient['first_name'] = 'Eric'
+    patient['last_name'] = 'Idle'
+    patient['is_checked_in'] = False
+
+# eric = {}
+# patient_initialize(eric)
+# print(eric)
+
 print('Challenge 2 -------------')
 # Challenge 2:
 # Rewrite patient_initialize so that it has 2 more arguments: first_name, and
@@ -23,17 +32,9 @@ print('Challenge 2 -------------')
 
 
 
-# def patient_initialize(patient, first_name, last_name):
-#     patient['first_name'] = first_name
-#     patient['last_name'] = last_name
-#     patient['is_checked_in'] = False
-#
-# shane = {}
-# patient_initialize(shane, 'Shane', 'LeBlanc')
-# print(shane)
-#
-# patient_initialize(shakur, 'Shakur', 'Ahmed')
-# print(shakur)
+
+
+
 
 print('Challenge 3 -------------')
 # Challenge 3:
@@ -41,11 +42,6 @@ print('Challenge 3 -------------')
 # patient dictionary as an argument. and then modify that argument to make
 # "is_checked_in" set to be True.
 # Again, use print to verify it's working.
-def patient_check_in(patient):
-    patient['is_checked_in'] = True
-shane = {}
-#patient_check_in(shane)
-print(shane)
 
 
 
@@ -65,15 +61,7 @@ print('Challenge 4 -------------')
 # dictionary.
 # Again, use print to verify it's working.
 
-def patient_nurse_check_up(patient):
-    patient['smokes'] = input('Does the patient smoke?')
-    patient['drinks'] = input('Does the patient drink?')
-    patient['bp'] = int(input('Patient blood pressure?'))
-    patient['seen_nurse'] = True
 
-#patient_nurse_check_up(shane)
-
-print(shane)
 
 
 
@@ -87,19 +75,10 @@ print('Challenge 5 -------------')
 # to "process" the patient.
 # Hint: Feel free to comment out the previous invocations of the above function
 # Add a prints as needed to report back on the process.
-def patient_initialize(first_name, last_name):
-    patient = {}
-    patient['first_name'] = first_name
-    patient['last_name'] = last_name
-    return patient
 
-def patient_visit():
-    patient = patient_initialize(input('First name?'), input('Last name?'))
-    patient_check_in(patient)
-    patient_nurse_check_up(patient)
-    return patient
 
-#print(patient_visit())
+
+
 
 print('-------------')
 # Bonus Challenge 1:
@@ -112,14 +91,6 @@ print('-------------')
 # 2. Recommend the patient a) visit the ER if blood pressure is above 180, or
 #    b) if the patient smokes, recommend the patient stop.
 
-def patient_doctor_diagnose(patient):
-    if patient['seen_nurse'] == True:
-        print('Doctor: Hello, ', patient['first_name'])
-    if 180 > patient['bp'] > 130:
-        print('Doctor: '+ patient['first_name'] + ', this doesn\'t look good... u got stage 2 hypertension')
-    if 130 > patient['bp'] > 120:
-        print('Doctor: '+ patient['first_name'] + ', it\'s only stage 1 hypertension, smoke on pal')
-patient_doctor_diagnose(patient_visit())
 
 
 
@@ -129,3 +100,4 @@ print('-------------')
 # Bonus Challenge 2:
 # Where does our data go? At the end of every check up, we should store it in a
 # file. Maybe use JSON, or CSV?
+

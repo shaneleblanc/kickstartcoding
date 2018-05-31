@@ -1,0 +1,296 @@
+[deck]
+readonly = true
+cssfile = ../basestyle.css
+
+[slide]
+title=Kickstart Coding - 4.2 - OOP
+
+
+[slide]
+title=Python - Hospital
+markdown : '''
+We'll start today with an activity building a more realistic application in
+Python
+
+* Increasingly in class, we will be building larger applications during
+  activities
+'''
+
+
+[slide]
+title=ACTIVITY 1 - hospital
+editor=./activities/1_hospital.py
+
+
+[slide]
+title=SOLUTION 1 - hospital
+editor=./solutions/1_hospital.py
+terminal=./solutions/
+
+
+
+[slide]
+title=OOP
+markdown : '''
+I swear I'm not to make any more puns in class
+'''
+
+
+[slide]
+title=OOPs, I did it again!
+markdown : '''
+![britney](file://./images/britney.gif)
+'''
+
+[slide]
+title=Leaving Britney (Puns) Alone...
+markdown : '''
+**Research & discuss** the following questions. Can you define the terms in
+your own words?
+
+* What is OOP?
+* What is meant by a software programming "paradigm"?
+* OOP paradigm
+* Class
+* Method
+* Instance
+* Object
+* Constructor
+* Property
+'''
+
+
+[slide]
+title=Object Oriented Programming
+markdown : '''
+* A paradigm is an approach to programming
+
+* OOP is this idea: Let's combine certain "shapes" of data with the functions
+  that often use that data.
+
+* This combination is called a "class" (in Python: basically synonymous with
+  the words "type" or "data type")
+
+* From classes, we can "construct" instances.
+'''
+
+
+[slide]
+title=class = blueprints
+markdown : '''
+![blueprints](file://./images/blueprints.jpg)
+'''
+
+
+[slide]
+title=instance = constructed buildings
+markdown : '''
+![suburbia](file://./images/suburbia.jpg)
+'''
+
+
+[slide]
+title=OOP Terminology
+markdown : '''
+
+Object Oriented Programming is a bunch of new terminology:
+
+## Key Terms
+* OOP - Object Oriented Programming - a way of thinking and arranging data in
+  programming
+* class - classes form "blueprints" for creating new object instances, example
+  "User" (basically synonymous with "type" or "data-type")
+* object instance - a specific occurrence of a class, example "janeqhacker is
+  an instance of User"
+* instantiating - the act of creating a new object (invokes constructor)
+* method - a function attached to an instance
+* property - data attached to an instance
+* constructor - the method that sets up a brand new object
+'''
+
+
+[slide]
+title=DEMO: Class
+editor=./demos/user_class.py
+terminal=./demos/
+
+
+
+[slide]
+title=ACTIVITY 2 - OOP hospital
+editor=./activities/2_oop_hospital.py
+
+
+[slide]
+title=SOLUTION 2 - OOP hospital
+editor=./solutions/2_oop_hospital.py
+terminal=./solutions/
+
+[slide]
+title=OOPidy scOOP - Kanye
+markdown : '''
+![kanye](file://./images/kanye_west.png)
+'''
+
+
+[slide]
+title=OOPidy scOOP
+markdown : '''
+More OOP terminology: "inheritance", aka "extension".
+
+If we have a class that has a lot of similarities to another class, but has a
+few differences, instead of starting from scratch, we can "inherit" which
+allows us to stay DRY.
+
+## Key Terms
+* inheritance - Classes can "inherit" (synonym: "extend") other classes. This
+  copies everything about one class into a new one.
+
+* sub class - The class that is doing the copying (inherited from) (aka child
+  class or derived class)
+
+* base class - The class that is getting copied from (inherited from) (aka
+  parent class or super class)
+
+* override - When a subclass "replaces" a method in the base class
+
+* `super()` - A feature of Python that lets you access the base class, just in
+  case you override something you still want
+
+* `static` - A method attached to the class, instead of the instance
+'''
+
+
+[slide]
+title=subclasses = variations on the blueprints
+markdown : '''
+![multiple_blueprints](file://./images/multiple_blueprints.jpg)
+'''
+
+
+
+[slide]
+title=DEMO: Sub-Class
+editor=./demos/user_class.py
+terminal=./demos/
+
+
+
+[slide]
+title=ACTIVITY 3 - OOP ER
+editor=./activities/3_oop_er.py
+
+
+[slide]
+title=SOLUTION 3 - OOP ER
+editor=./solutions/3_oop_er.py
+terminal=./solutions/
+
+[slide]
+title=Software architecture
+
+
+[slide]
+title=Software architecture - class diagrams
+markdown : '''
+"Class diagrams" are another tool in the code-planning toolbox
+
+![inheritance](file://./images/class_inheritance.jpg)
+'''
+
+
+[slide]
+title=Your turn!
+markdown : '''
+...but don't go overboard with diagramming...
+
+![inheritance](file://./images/complicated_class_diagram.png)
+'''
+
+
+[slide]
+title=Dia example
+markdown : '''
+![company](file://./images/company.png)
+'''
+
+
+[slide]
+title=DISCUSSION: Diagram the following
+markdown : '''
+1. First, discuss how you might diagram each of these with someone next to you
+
+2. Then, try diagramming each one
+
+Using a pen and paper (or a graphical tool, such as Dia)
+
+* Students (think about: students, courses, assignments)
+
+* Employees at a corporation (think about: employees, managers, positions,
+  unfilled positions)
+
+* Twitter (think about: users, tweets, follows)
+
+* GitHub (think about: users, repos, pull requests)
+
+* Netflix (think about: movies, TV series, users, who watched what, preferences)
+'''
+
+[slide]
+title=Example diagrams
+markdown : '''
+* Employees at a corporation (think about: employees, managers, positions,
+  unfilled positions)
+
+* Students (think about: students, courses, assignments)
+
+* Twitter (think about: users, tweets, follows)
+
+* GitHub (think about: users, repos, pull requests)
+
+* Netflix (think about: movies, TV series, users, who watched what, preferences)
+'''
+
+[slide]
+title=Example solution diagrams (made with Dia)
+
+[slide]
+title=Students example
+markdown : '''
+![students](file://./solution_diagrams/students.png)
+'''
+
+
+[slide]
+title=Twitter example
+markdown : '''
+![Twitter](file://./solution_diagrams/twitter.png)
+'''
+
+
+[slide]
+title=GitHub example
+markdown : '''
+![GitHub](file://./solution_diagrams/github.png)
+'''
+
+
+[slide]
+title=Netflix example
+markdown : '''
+![netflix](file://./solution_diagrams/netflix.png)
+'''
+
+
+
+
+[slide]
+title=ACTIVITY 4
+markdown : '''
+Take one of these diagrams... and start coding it! Just think first about
+creating necessary classes with the right properties.
+'''
+
+
+
+
