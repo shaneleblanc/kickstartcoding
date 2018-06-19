@@ -1,0 +1,73 @@
+As before, do one challenge at a time, and raise your hand if/when you
+get stuck!
+
+
+-------------------
+Challenge 1:
+
+1. As before, get the site running.
+
+2. If it warns about migrations, run python manage.py migrate
+
+3. Create a new Django Superuser (administrator account). Remember the
+name / password you used. Clue:
+
+    python manage.py createsuperuser
+
+4. Using the /admin/ panel, login using this user.
+
+
+
+-------------------
+Challenge 2:
+
+Once logged into the admin panel, create several users.
+
+
+
+-------------------
+Challenge 3:
+
+Change the homepage view such that it gets the users from the database
+instead of from the list. A clue:
+
+    from django.contrib.auth.models import User
+    users = User.objects.all()
+
+
+
+
+-------------------
+Challenge 4:
+
+Change the homepage view such that it creates a new user in the database
+using the User model when you hit submit on the new user form. Clue:
+
+    User.objects.create(
+        username='example_user',
+    )
+
+
+
+-------------------
+Challenge 5:
+
+On the "Feed" page, remove the "username" field, and make the username
+for new posts instead always get populated from the currently
+authenticated user. In other words, if you are logged-in as "admin",
+then the posts you create should have the username of "admin".
+
+
+-------------------
+Bonus Challenge 1:
+
+Make the "Feed" page only accessible to users who are logged-in. You can
+test logging-in (and logging-out) using the admin panel.
+
+Bonus Challenge 2:
+
+Research the Django "messages" framework. You can also take a look at
+the DMV demo, which has this functionality. Can you make it so that it
+will send an error back to the user when they try to access the password
+protected page? ("feed")
+

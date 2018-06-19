@@ -1,0 +1,56 @@
+As before, do one challenge at a time, and raise your hand if/when you
+get stuck!
+
+
+-------------------
+Challenge 1:
+
+Get this code running. You should see a site that might coincidentally
+resemble a popular social network when it is fully working. Refer to the
+steps from previous activities if you get stuck.
+
+Generally, it requires three steps:
+pipenv --python 3.6
+pipenv shell
+pipenv install django
+
+Then finally:
+python manage.py migrate
+python manage.py runserver
+
+Click around a little, until you understand the app. Note that the
+posting and search functionalities are (intentionally) broken.
+
+
+
+
+-------------------
+Challenge 2:
+
+Your goal now is to implement C aspect of CRUD. Look at the views.py for
+further clues.
+
+
+-------------------
+Challenge 3:
+
+Implement R aspect of CRUD. Look at the views.py for further clues.
+
+
+-------------------
+Challenge 4:
+
+Implement D aspect of CRUD. Look at the views.py for further clues.
+
+
+-------------------
+Challenge 5:
+
+Implement U aspect of CRUD. Look at the views.py for further clues.
+
+
+-------------------
+Advanced Bonus Challenge:
+
+Can you make it so that the user who is posting the wall post has a
+username that appears in the post?

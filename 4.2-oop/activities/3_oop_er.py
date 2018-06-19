@@ -10,6 +10,7 @@ class Patient:
         self.recommendation = None
         self.diagnosis = None
         self.extra_notes = None
+        self.blood_pressure = 0
 
     def print_info(self):
         print('-----PATIENT', self.first_name, self.last_name, '----')
@@ -44,16 +45,13 @@ class Patient:
         self.extra_notes = input('Extra physician notes? ')
 
 
+
 print('Challenge 1 -------------')
 # Challenge 1:
 # Debugging challenge: Examine the class above. When you uncomment the
-# following lines, an error occurs. Instead of saying "Patient must visit nurse 
+# following lines, an error occurs. Instead of saying "Patient must visit nurse
 # first", it causes a Python error.  Why is that? Can you fix it?
 # HINT: This requires editing the original class.
-
-#eric = Patient('Eric', 'Idle')
-#eric.doctor_diagnose()
-
 
 
 print('Challenge 2 -------------')
@@ -64,7 +62,39 @@ print('Challenge 2 -------------')
 
 
 
+class EmergencyPatient(Patient):
 
+    def __init__(self, patient):
+        super().__init__(patient.first_name, patient.last_name)
+        self.is_checked_in = True
+
+
+    def triage(self):
+        if input('Requires life saving intervention?') == 'True':
+            self.triage_level = 1
+            return
+        if input('Confused, lethargic, severe distress?') == True:
+            self.triage_level = 2
+            return
+        x = input('How many resources needed (none, some, or many):')
+        if x == 'none':
+            self.triage_level = 5
+            return
+        if x == 'one':
+            self.triage_level = 4
+            return
+        if x == 'many':
+            self.triage_level = 3
+            return
+
+    def print_info(self):
+        print(super().print_info(), "\n Triage level:", self.triage_level)
+
+
+eric = Patient('Eric', 'Idle')
+ep = EmergencyPatient(eric)
+ep.triage()
+ep.print_info()
 
 
 
@@ -130,5 +160,3 @@ print('-------------')
 # 1. Singleton pattern
 # 2. Factory pattern
 # 3. Object pool
-
-

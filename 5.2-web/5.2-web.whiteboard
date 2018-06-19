@@ -1,0 +1,228 @@
+[deck]
+readonly = true
+cssfile = ../basestyle.css
+
+[slide]
+title=Kickstart Coding - Day 5.2
+
+[slide]
+title=Web Servers
+
+[slide]
+title=ACTIVITY 1 - api review
+editor=./activities/1_api_review/api_review.py
+
+
+[slide]
+title=SOLUTION 1 - api review
+editor=./solutions/1_api_review/api_review.py
+terminal=./solutions/api_review/
+
+
+[slide]
+title=Pop Quiz!
+
+
+[slide]
+title=Research: This one is "open book"...
+markdown : '''
+1. With a partner, formulate in your own words the
+definitions of the following terms: `internet` `client`
+`server` `request` `response` `API`
+
+2. ... and these `HTTP` `method` `curl`
+
+3. How might you record and inspect requests and
+responses in Chrome(ium)?
+
+4. How might you simulate and test requests?
+
+'''
+
+
+[slide]
+title=The Internet
+markdown : '''
+![The internet](file://./images/world-submarine-cable-map.png)
+'''
+
+[slide]
+title=The Internet
+markdown : '''
+![server room](file://./images/server_room.jpg)
+'''
+
+[slide]
+title=Requests & Responses - 1
+markdown : '''
+![requests and responses](file://./images/request_response_1.png)
+'''
+
+
+[slide]
+title=Requests & Responses - 2
+markdown : '''
+![requests and responses](file://./images/request_response_2.png)
+'''
+
+
+[slide]
+title=Questions?
+
+
+[slide]
+title=Intro to TCP
+markdown : '''
+### KEY TERMS
+* protocol - A agreed upon standard of how computers should talk to each other
+  and exchange data
+
+* TCP - The protocol that allows two computers to talk to each other
+  ("establish a connection") in a two way conversation over the internet (HTTP,
+  email, video chat, multiplayer video games are all examples of things that
+  use TCP)
+
+* HTTP - The protocol that establishes how web browsers talk with website
+  servers. It is implemented "on top of" TCP.
+
+* HTTP server - software that sits around waiting for HTTP requests to come in,
+  then generates HTTP responses
+
+* Port number - A number-code designating what type of data is going over this
+  TCP connection (HTTP is 80, HTTPS is 443, email is 25 -- 8080 is often used
+  for testing)
+'''
+
+[slide]
+title=DEMO: HTTP over TCP
+terminal=./demos/
+markdown : '''
+### We are "calling up" a server with TCP, then sending a HTTP GET request manually
+
+telnet httpbin.org 80
+
+### Minimum valid HTTP request
+
+`GET / HTTP/1.0`
+
+`Host: httpbin.org`
+'''
+
+[slide]
+title=DEMO: Our own HTTP server
+editor=./demos/example_tcp_hello_world.py
+terminal=./demos/
+
+[slide]
+title=ACTIVITY 2: tcp to http
+editor=./activities/2_tcp_to_http.py
+markdown : '''
+* Type up in pseudocode a server that will conditionally serve back different
+  data based on the request:
+    * '/' should give back one HTML document
+    * '/about-me' should give back a different HTML document
+    * '/contact-me' should give back a final HTML document
+
+* Return different HTML documents based on the request being made
+
+* If you finish early with the pseudocode version, work on implementing it
+'''
+
+
+[slide]
+title=SOLUTION 2: tcp to http
+editor=./solutions/2_tcp_to_http_basic.py,./solutions/2_tcp_to_http_refactored.py
+terminal=./solutions/
+
+
+[slide]
+title=SOLUTION 2: tcp to http refactored
+editor=./solutions/2_tcp_to_http_refactored.py
+terminal=./solutions/
+
+
+[slide]
+title=DISCUSSION: TCP / HTTP routing & refactor
+markdown : '''
+Look at
+
+* ./solutions/2_tcp_to_http.py
+
+* ./solutions/2_tcp_to_http_refactored.py
+
+Can you explain what they are doing in your own words?
+
+### Key terms:
+* routing - the portion of a web server that deals with taking in requests and
+  deciding which code (e.g. functions) to use it
+'''
+
+
+[slide]
+title=Routing
+markdown : '''
+![routing](file://./images/routing.png)
+'''
+
+
+[slide]
+title=ACTIVITY 3: http guestbook
+editor=./activities/3_http_guestbook.py
+terminal=./solutions/
+
+
+[slide]
+title=SOLUTION 3: http guestbook
+editor=./solutions/3_http_guestbook.py
+terminal=./solutions/
+
+
+[slide]
+title=SOLUTION 3: http guestbook
+
+
+
+[slide]
+title=Next topic is seriously important. No more puns, from this point on.
+
+
+[slide]
+title=Django
+
+[slide]
+title=Django
+markdown : '''
+![Django unchained](file://./images/django_unchained.gif)
+'''
+
+
+
+[slide]
+title=Introducing Django
+markdown : '''
+* **Templating** -- Django comes with a templating system almost identical to
+  Jinja
+* **Database** -- Django comes with tools that makes reading and updating data
+  in our database easier (even a graphical administration panel)
+* **Routing** -- Django's main functionality is as a "web application server
+  framework". It does all the routing for us.
+'''
+
+[slide]
+title=Django
+markdown : '''
+![Django what's not to like?](file://./images/django_whats_not_to_like.gif)
+'''
+
+
+[slide]
+title=ACTIVITY 4: django
+editor=./activities/4-django/instructions.txt
+terminal=./solutions/4-django/
+
+
+[slide]
+title=SOLUTION 4: django
+editor=./solutions/4-django/manage.py
+terminal=./solutions/4-django/
+

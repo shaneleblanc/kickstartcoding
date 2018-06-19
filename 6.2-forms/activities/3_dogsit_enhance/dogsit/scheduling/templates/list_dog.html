@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Add Dog Sitting Appointment</h2>
+
+{% if error %}
+    <div class="alert alert-danger">
+        <strong>You're in deep sit!</strong> {{ error }}
+    </div>
+{% endif %}
+{% load bootstrap4 %}
+<form action="." method="POST">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+    <button>Add dog sitting appointment</button>
+    {% endbuttons %}
+</form>
+
+{% endblock content %}

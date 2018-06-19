@@ -50,4 +50,3 @@ class Patient:
         self.extra_notes = input('Extra physician notes? ')
 
 eric = Patient('Eric', 'Idle')
-

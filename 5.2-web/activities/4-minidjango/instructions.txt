@@ -1,0 +1,58 @@
+In this activity we use Django to make a simple website -- just like the
+one from Activity 3, except taking advantage of Django's much easier
+request routing features.
+
+----
+
+Challenge 1:
+Get the code working!
+1. Run "pipenv shell" to enable pipenv
+2. Run "pipenv install" to install dependencies from Pipfile (in this
+case, only Django)
+3. Run python manage.py runserver to run the Django Python server itself
+
+Now, visit localhost:8000 or 127.0.0.1:8000 (both will do the same
+thing). You should see a "Page not found" error page.
+
+Can you figure out how to use your browser to get to the "Hello Django
+World" message?
+
+----
+
+Challenge 2:
+Your goal now is to make 3 pages that link to each other, much like the
+solution to Activity 3. Feel free to put what ever you want on them, the
+only requirement is you return HTML code that includes <a> links to the
+different pages.
+
+Modify the manage.py (but don't touch the boilerplate at the bottom!).
+
+----
+
+Challenge 3:
+Create a guestbook, replicating the solution to activity 3, except using
+Django.
+
+
+
+-----
+
+Bonus Challenge:
+Can you incorporate templating into here? Here are two options:
+
+1. Use Django's built-in templating  -- this requires adding an additional
+setting to the boilerplate below. Add the following lines:
+        TEMPLATES=[{
+            'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        }],
+
+Then, import Template and Context:
+        from django.template import Template, Context
+
+Django's templating is almost identical to Jinjas (they are essentially
+2 dialects of the same language).
+
+
+2. Use Jinja's templating. This is just a matter of installing Jinja2,
+importing it, and then using it like you have done for previous
+activities.

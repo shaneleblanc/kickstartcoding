@@ -1,0 +1,116 @@
+As before, do one challenge at a time, and raise your hand if/when you
+get stuck!
+
+
+-------------------
+Challenge 1:
+
+Get this code running! You should see a Shiba Adoption site when it is
+fully working. Refer to the steps from previous activities if you get
+stuck. Generally, it requires three steps: pipenv shell, pipenv install,
+python manage.py runserver
+
+
+
+
+-------------------
+Challenge 2:
+
+Look closely at "adoption/views.py", at "shibadopt/urls.py", and at
+"adoption/templates/homepage.html". Can you explain broadly in your own
+words how all these files fit together?
+
+
+
+-------------------
+Challenge 3:
+
+Time to get coding! Your first goal is to fix the Shiba count on the
+homepage. It currently shows a much bigger, inaccurate number.
+
+Hint: len(name_of_list) will get the length of a list.
+
+
+
+
+-------------------
+Challenge 4:
+
+Your second goal is to add a new page. It should be the "Adoption" page.
+For now, just have it say the text "To adopt a Shiba, contact us" (don't
+get hung up on styling, etc).  Create the page such that the link on the
+homepage is functioning.
+
+Hint 1: Your goal here is copying & pasting what you see with the
+homepage, but changing it to use a new HTML template file. This too
+should be copied from the existing template file, and changed so that
+instead of showing the Shibas, it shows the desired text.
+
+Hint 2: Remember to add the route to urls.py
+
+
+
+
+
+
+-------------------
+Challenge 5:
+
+Okay, now let's improve the adoption page. Try adding the following code
+to your new template HTML:
+
+<form action="" method="GET">
+    <input name="number" />
+    <button>Adopt and remove</button>
+</form>
+
+Observe what it does. See how it modifies the URL.
+
+Now, add the following code to your new adoption view:
+
+if 'number' in request.GET:
+    number = int(request.GET['number'])
+    print('They entered:', number)
+
+Observe what it does. See how prints what was entered. Write in
+pseudocode how you think you might use this to make the page remove a
+dog from the list.
+
+
+
+-------------------
+Challenge 6:
+
+Implement the pseudocode you wrote for Challenge 5.
+
+HINT: Here is some clue on how to remove an element (in this case, a
+dictionary with id_number equal to 3) from a list:
+
+for shiba in shibas:
+    if shiba['id_number'] == 3:
+        print('found shiba, removing!')
+        shibas.remove(shiba)
+
+
+Once you get this working, note how even successfully deleted shibas seem
+to "come back" every time the server restarts. Can you explain why in
+your own words?
+
+-------------------
+Challenge 7:
+
+With this as a guide, create a "Add a Shiba" page. This page should
+function like the Shiba deletion page, except it should add Shibas, and
+allow the user to specify the name and age of the shiba being added.
+
+
+
+-------------------
+Bonus Challenge 1:
+Add a link to reverse the Shiba list. This should also use GET
+variables.
+
+Bonus Challenge 2:
+Add links that sort the Shibas by age or name. They should also use GET
+variables.
+

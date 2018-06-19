@@ -1,0 +1,86 @@
+As before, do one challenge at a time, and raise your hand if/when you
+get stuck!
+
+
+-------------------
+Challenge 1:
+
+Get this code running, same as before. Make sure you understand how POST
+is sending data to the server.
+
+
+-------------------
+Challenge 2:
+
+Create a form class for the "add dog appointment" page (the list_dog
+view).  For now, just use the form to *render the HTML code* (not to
+validate it, just yet). Here is some clue code:
+
+
+from django import forms
+
+class AppointmentForm(forms.Form):
+    # Add in more...
+    name = forms.CharField(label='Name', required=True)
+
+
+In your view, you then should create an instance of this form and
+include it in the context, as such:
+
+form = AppointmentForm()
+context = {
+    'form': form,
+}
+
+Finally, in your template, you should include the form with code
+something like:
+
+{{ form.as_p }}
+
+
+Take a look at the DMV example in demos, also, for more tips.
+
+
+-------------------
+Challenge 3:
+
+Now, modify your view to use the form to validate and retrieve the data
+that the user sent back in the POST request from the front-end.
+
+Hint 1: Your cheatsheet has a big code snippet for this!
+
+Hint 2: Also, there's good online documentation, notably here:
+https://docs.djangoproject.com/en/2.0/topics/forms/#building-a-form-in-django
+
+Hint 3: Take a look at the DMV example in demos, also, for more tips.
+
+
+-------------------
+Challenge 4:
+
+Repeat Challenge 2, but for the sitter form.
+
+
+-------------------
+Challenge 5:
+
+Repeat Challenge 3, but for the sitter form.
+
+-------------------
+Advanced Challenge 1:
+
+Can you make "one click booking", by putting the booking mechanism on
+the front page so that each dog appointment has a drop-down listing the
+sitters to book that dog appointment for that sitter?
+
+Hint: You will have to render multiple form instances on one page.
+
+
+-------------------
+Advanced Challenge 2:
+
+Separate the dogs by "booked" and "unbooked" on the homepage.
+
+Hint: Look at the "regroup" templatetag feature of Django templates.
+
+

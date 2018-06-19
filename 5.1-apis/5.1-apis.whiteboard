@@ -1,0 +1,375 @@
+[deck]
+readonly = true
+cssfile = ../basestyle.css
+
+[slide]
+title=Kickstart Coding - 5.1
+
+[slide]
+title=HTTP, the Web, and APIs
+
+[slide]
+title=We're halfway there...
+markdown : '''
+![bon jovi](file://./images/bonjovi.gif)
+'''
+
+[slide]
+title=So if you are living on a prayer...
+markdown : '''
+* If you feel like you are falling behind, schedule a 1:1 - we don't want
+  ANYONE to fall behind!
+
+* **Join a study group**
+
+* Ask questions. Study ahead.
+
+
+* Redo the in-class activities outside of class.
+
+* **Code and practice every day** - See if you can spend at least 1 hour a day
+  going over previous activities, and redoing them without looking at solutions
+'''
+
+
+[slide]
+title=Remember - Hang in there!
+markdown : '''
+
+![climbing](file://./images/climbing.gif)
+'''
+
+[slide]
+title=Remember - Hang in there!
+markdown : '''
+
+# It's hard because it is A LOT to learn
+
+But remember, in the end you will have acquired a **powerful** and **valuable**
+skill
+
+## YOU CAN DO IT!
+'''
+
+
+
+[slide]
+title=ACTIVITY 1 - dict review
+editor=./activities/1_dict_review.py
+
+
+[slide]
+title=SOLUTION 1 - dict review
+editor=./solutions/1_dict_review.py
+terminal=./solutions/
+
+[slide]
+title=The Internet
+
+[slide]
+title=The Internet
+markdown : '''
+![Fiber](file://./images/backbone.jpg)
+'''
+
+
+[slide]
+title=The Internet
+markdown : '''
+![Submarine cables](file://./images/world-submarine-cable-map.png)
+'''
+
+
+
+[slide]
+title=The Internet
+markdown : '''
+**Internet Protocol** is the system we have devised for computers around the
+world to be able to talk to each other. **IP Address** is the "phone number"
+they can call each other up on.
+
+Example IP addresses:
+* v4: `216.58.194.174` - one of the ones associated with google.com (v4)
+* v6: `2607:f8b0:4005:802::200e` - another associated with google.com
+
+Famous IP addresses:
+* `8.8.8.8` - owned by Google
+* `1.1.1.1` - owned by CloudFlare
+'''
+
+
+
+[slide]
+title=The Internet
+markdown : '''
+
+
+### KEY TERMS
+* internet - The idea that many computers in the world are all connected via
+  wires and can call each other other up
+* **IP address** - internet protocol address, a "phone number" for computers on
+  the internet, used when one computer wants to call another computer on the
+  Internet
+* domain name - aka "top level domain", e.g. google.com, a mnemonic you can buy
+  that you associate with an IP address so we don't have to remember the
+  numbers
+* HTTP - a protocol each other (a "protocol") that forms the foundation of the
+  web, notably defining the concept of "responses" and "requests"
+'''
+
+[slide]
+title=And now for... the most important concepts in web / HTTP
+
+
+[slide]
+title=Requests & Responses
+markdown : '''
+![requests and responses](file://./images/request_response_1.png)
+'''
+
+
+[slide]
+title=Requests & Responses
+markdown : '''
+![requests and responses](file://./images/request_response_2.png)
+'''
+
+
+
+[slide]
+title=The most important concept in HTTP
+markdown : '''
+Requests and responses are the ENTIRETY of the web.
+
+### KEY TERMS
+* client - the software that sends HTTP "requests" (in our case, a web
+    browser)
+* request - the message that goes to the server (paper airplane in)
+* request path - the resource being requested from the server
+* response - the message that comes back from the server (paper airplane
+    out)
+* server (hardware) - a computer that sits in some big warehouse and
+    receives requests for information and "serves it up" via responses
+* server (software) - the software that runs on a computer and waits for
+    request
+'''
+
+[slide]
+title=DEMO: Dev Tools Network Tab
+
+[slide]
+title=DISCUSSION: Dev Tools Network Tab
+markdown : '''
+1. Go to a site (as an example, YouTube), and Look at
+the Network Tab
+
+2. Discuss with those around you: See if you can
+establish cause and effect, clicking on items and
+seeing the requests
+
+3. Can you isolate requests to do certain things?
+'''
+
+
+
+[slide]
+title=Quiz
+markdown : '''
+1. Cheatsheets put away
+2. Laptops closed
+3. Put your name at the top
+4. Just give it your best! You probably know more than you think.
+'''
+
+[slide]
+title=Now for the good stuff
+markdown : '''
+
+* Up until now we've been learning the core basics of
+  Python
+'''
+
+[slide]
+title=Now for the good stuff
+markdown : '''
+
+* Up until now we've been learning the core basics of
+  Python
+
+* Now it's time to unleash your TRUE ULTIMATE POWER!
+
+'''
+
+[slide]
+title=True ultimate API power!!!
+markdown : '''
+![goku](file://./images/goku.gif)
+'''
+
+
+#[slide]
+#title=True ultimate API power!!!
+#markdown : '''
+#![goku](file://./images/kid_falling_over.gif)
+#'''
+
+
+[slide]
+title=API
+markdown : '''
+What are these acronyms?
+
+* GUI
+* CLI
+* API
+'''
+
+
+[slide]
+title=API
+markdown : '''
+What are these acronyms?
+
+* GUI - Graphical User Interface
+* CLI - Command-Line Interface
+* API - Application Program Interface
+    * The "interface" for code
+'''
+
+
+[slide]
+title=API
+markdown : '''
+Web API's are based on requests and responses
+
+### KEY TERMS
+
+* API - The interface our code can use to access other
+  people's data and code.
+'''
+
+
+[slide]
+title=More HTTP Terminology
+
+[slide]
+title=HTTP Continued
+markdown : '''
+
+### Key Terms
+* curl - a nice commandline tool that lets us test out and explore requests
+      and responses
+* headers - extra information that goes in the response
+  and request, basically "meta-data"
+* body - the contents or "meat" of the request or response
+* path - the URL of the thing you are requesting
+* method - the "verb" of the request, by default GET -- doesn't show in the URL
+  but categorizes types of requests
+
+'''
+
+
+[slide]
+title=DEMO: Curl
+terminal = ./demos/
+
+[slide]
+title=ACTIVITY 2: curl
+editor = ./activities/curl.txt
+
+[slide]
+title=Python Requests
+
+
+[slide]
+title=Python Requests
+markdown : '''
+The most popular package (installable with `pipenv`, just like `jinja2` or
+`silly`) for making requests in Python is called `requests`
+
+Let's do a quick warm-up exercise to try it out, and also get more practice
+installing software via `pipenv`.
+'''
+
+
+[slide]
+title=DEMO - Python Requests
+editor=./demos/python_requests.py
+editor=./demos/python_requests.py
+
+
+[slide]
+title=ACTIVITY 3 - intro to requests
+editor=./activities/3_intro_to_requests.py
+
+
+[slide]
+title=SOLUTION 3 - intro to requests
+editor=./activities/3_intro_to_requests.py
+terminal=./solutions/
+
+
+[slide]
+title=Error handling in Python in Python in Python in Python
+
+
+[slide]
+title=Error handling
+markdown : '''
+* Now's as good time as any to talk about error
+  handling
+
+* Generally speaking if something goes wrong with our
+  program *it is good that it stops and tells us*
+
+* However, sometimes we may want to do continue, even
+  if an error occurs (can you think of any?)
+'''
+
+
+[slide]
+title=Error handling
+markdown : '''
+* However, sometimes we may want to do something different when something goes
+  wrong, e.g. no internet access or an API is down
+
+### KEY TERMS
+* exception - when something goes wrong in your program
+
+* try/catch - the way we can check for exceptions
+'''
+
+
+[slide]
+title=ACTIVITY 4 - requests marathon
+editor=./activities/4_requests_marathon.py
+
+
+[slide]
+title=SOLUTION 4 - requests marathon
+editor=./solutions/4_requests_marathon.py
+terminal=./solutions/
+
+
+
+#[slide]
+#title=DEMO - Exceptions
+#editor=./demos/exceptions.py
+#terminal=./demos/
+#
+#
+#[slide]
+#title=ACTIVITY 5 - exceptions
+#editor=./activities/1_review_func_for.py
+#
+#
+#[slide]
+#title=SOLUTION 5 - exceptions
+#editor=./activities/1_review_func_for.py
+#terminal=./solutions/
+#
+
+
+
+
+

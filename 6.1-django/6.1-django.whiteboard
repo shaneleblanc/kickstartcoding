@@ -1,0 +1,222 @@
+[deck]
+readonly = true
+cssfile = ../basestyle.css
+
+
+[slide]
+title=Kickstart Coding - Day 6.1
+
+[slide]
+title=Django Structure
+
+
+[slide]
+title=Remember - Hang in there!
+markdown : '''
+
+![climbing](file://./images/climbing.gif)
+'''
+
+
+[slide]
+title=How to learn frameworks
+markdown : '''
+* From this point on, we are no longer learning the Python minutia, but instead
+  are learning *frameworks*
+
+* A *framework* is an entire way of doing things in Python, complete with an
+  officially correct directory structure, correct file structure, and correct
+  way to do all sorts of common tasks
+
+* When asking the all-knowing Google, you'll do "how do I make a sign up form
+  *in Django*" instead
+
+'''
+
+[slide]
+title=If your fundamentals are still a little shaky...
+
+[slide]
+title=...that's okay.
+
+
+[slide]
+title=How to learn frameworks
+markdown : '''
+If your fundamentals are still shaky... that's okay. They'll come. Focus now on
+the more realistic scenario of learning how to work within a framework, since
+in real life you will almost never be generating code from a blank file, but
+instead working with copying and repeating existing code and structures.
+
+**The best skill you can have for the day-to-day in a junior web development
+position is identifying patterns in existing code and repeating those patterns
+to add functionality.**
+'''
+
+
+[slide]
+title=Unlock Django's TRUE POWER LEVEL!
+markdown : '''
+
+![climbing](file://./images/goku.gif)
+'''
+
+[slide]
+title=The Django Framework
+
+[slide]
+title=The Django Framework
+markdown : '''
+Up until now, we've doing Django "the wrong way".
+
+Let's now do Django the right way.
+'''
+
+
+[slide]
+title=Django: project vs app
+markdown : '''
+A Django "project" is organized into many "apps"
+
+Each app has it's own URLs, views, and templates.
+
+
+Concrete example for KickstartCoding.com:
+
+```
+kickstartcoding/      - the root project
+    - home            - app  (homepage and course information)
+    - blog            - app  (the blog article system)
+    - enrollment      - app  (the enrollment form system)
+```
+
+### KEY TERMS
+* django "project" - the term Django calls a single "instance" of using Django
+* django "app" - Django terminology for breaking apart our project into
+  different sections
+'''
+
+
+[slide]
+title=DEMO: Using Django Admin to start a Django project
+editor = ./activities/1_django_admin_to_start_projects.txt
+terminal = ./demos/
+
+
+[slide]
+title=ACTIVITY 1: django admin to start a project and app
+editor = ./activities/1_django_admin_to_start_projects.txt
+
+
+[slide]
+title=Django Terminology
+markdown : '''
+
+MVC - (Model View Controller) the "keep stuff separate" philosophy that we
+should separate out the code in our web app into categories and directories
+based on the role it fulfills.
+
+### KEY TERMS:
+* MVC - Model View Controller, the philosophy of separating 1. user interface
+  and presentation of data from 2. storing and modifying data
+* Model, View, Templates - The three main categories of code in a Django
+  application
+* model - Validates data in the database. Stores and retrieves database data.
+* view - Code that fetches data and makes responses based on requests coming
+  in. Contains the "business logic": Makes all the decisions.
+* template - e.g. Jinja or Django templates, present data with HTML and CSS
+
+*NOTE:* If you are used to Rails or Express, you'll notice Django interprets
+MVC more strictly according to the original paradigm. Because of this, Rails
+and Express use the word "controller" where Django uses the word "view".
+
+'''
+
+
+[slide]
+title=DISCUSS: Discuss the advantages of MVC
+markdown : '''
+1. Can you explain in your own words a "django project" vs a "django app"?
+
+2. What might be the advantages of MVC, the "keep stuff separate" philosophy?
+
+3. Discuss which category each of the following code goes into (either "model",
+"view", or "template"):
+- Code to make a HTML list of dogs
+- Code which decides if a dog is too old to be adopted
+- Code that stores a dog adoption record into the database
+- Code that checks if a user is logged out to prevent them from continuing
+- Code that ensures email addresses in the database look valid with "@" in them
+- Code which renders HTML showing a dog's adoption history
+'''
+
+
+[slide]
+title=DISCUSSION ACTIVITY 2: discuss mvc txt
+editor = ./activities/2_discuss_mvc.txt
+
+[slide]
+title=Quiz
+markdown : '''
+1. Cheatsheets put away
+2. Laptops closed
+3. Put your name at the top
+4. Just give it your best! You probably know more than you think.
+'''
+
+[slide]
+title=ACTIVITY 3: shiba
+editor = ./activities/3_shiba/instructions.txt
+
+
+[slide]
+title=REVIEW 3: shiba
+editor : '''
+./solutions/3_shiba/shibadopt/adoption/views.py
+./solutions/3_shiba/shibadopt/shibadopt/urls.py
+./solutions/3_shiba/shibadopt/adoption/templates/*.html
+'''
+
+
+
+[slide]
+title=HTTP & HTML Terminology
+markdown : '''
+Notice how in the solution, if we hit "refresh" after adding a dog, it keeps on
+adding more dogs? This is bad behavior!
+
+### KEY TERMS:
+* form - The HTML boxes where we fill things in
+* GET - A request used to retrieve data ("read-only")
+* POST - A request used to send data, or request data be modified or deleted
+'''
+
+
+[slide]
+title=QUICK DISCUSSION: Which for which?
+markdown : '''
+GET or POST should be used for the following?
+
+* Viewing a friend's photos on a social network
+* Creating a new post on a social network
+* Sending a friend request on a social network
+* Searching for friends on a social network
+* Uploading a photo
+'''
+
+
+[slide]
+title=ACTIVITY 4: shiba with POST
+editor = ./activities/4_shiba_post/instructions.txt
+
+
+[slide]
+title=REVIEW 4: shiba with POST
+editor : '''
+./solutions/4_shiba_post/shibadopt/adoption/views.py
+./solutions/4_shiba_post/shibadopt/shibadopt/urls.py
+./solutions/4_shiba_post/shibadopt/adoption/templates/*.html
+'''
+
+
+

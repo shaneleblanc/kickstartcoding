@@ -1,0 +1,165 @@
+[deck]
+readonly = true
+cssfile = ../basestyle.css
+
+[slide]
+title=Kickstart Coding - 4.3 - Jinja
+
+[slide]
+title=Pipenv, PyPI, and Jinja
+
+[slide]
+title=ACTIVITY 1 - Game dev time!
+markdown : '''
+* See `1_game.txt` for full details
+
+* Remember to use pseudocode and state diagrams!
+
+* **Pick one** - if you have time, do multiple. If you've already done
+  one of these, pick a new one.
+
+### Trivia (Easiest)
+Make a trivia game! You have the skills to do this. It should ask a series of
+questions, such as about capitals of countries, and check if the user entered
+the right thing.
+
+### Anagrams
+This game must display a word, except the letters will be scrambled in a random
+order. The user must then type in what they think the word is.
+
+### Hangman
+Make a hangman game. If you feel stuck starting from scratch, see the bonus
+activity from last lesson.
+
+Bonus (if you have time): RPG Battle
+'''
+
+[slide]
+title=SOLUTION 1 - game review
+editor=./solutions/1_games/anagrams.py,./solutions/1_games/hangman.py,./solutions/1_games/trivia.py
+terminal=./solutions/1_games/
+
+
+[slide]
+title=PyPI
+
+
+[slide]
+title=PyPI
+browser=http://pypi.python.org/
+markdown : '''
+Python Package Index (PyPI) is a big repository of free software Python
+libraries
+'''
+
+
+[slide]
+title=PyPI Key Terms
+markdown : '''
+Term overload!
+
+**Pipenv** is a tool for downloading software packages from **PyPI** (the
+website and repository). It downloads them into directories known as
+a **virtualenv**. It is best practice to make one of these for each
+project you work on, to keep the different downloads separate. This is
+because each project might have different needs from PyPI.
+
+### Key Terms
+* PyPI - a giant repository of free, open source libraries that various
+  people around the world have written, for use in your code
+* Pipenv - one of several tools for downloading and using modules from PyPI
+* virtualenv - the place on your computer where third party libraries
+  go when downloaded from PyPI. Pipenv automatically creates these for
+  each project you are working on.
+'''
+
+
+[slide]
+title=DEMO: Pipenv
+terminal=./demos/
+markdown : '''
+Steps:
+
+`pipenv --python 3.6`
+
+`pipenv shell`
+
+`pipenv install silly`
+
+`python3`
+'''
+
+
+[slide]
+title=ACTIVITY 2: pipenv and pypi
+editor=./activities/2_pipenv_and_pypi.txt
+markdown : '''
+hints:
+
+`pipenv --python 3.6`
+
+`pipenv shell`
+
+`pipenv install silly`
+'''
+
+[slide]
+title=Jinja
+
+
+[slide]
+title=Jinja
+markdown : '''
+Jinja is a templating language. Templating reads strings or files like
+`Hello {{ name }}`, and allow values to be inserted in placeholders.
+
+Later in the class we will learn Django, and Jinja is very similar to
+Django's templating.
+
+### KEY TERMS
+* templating language - a "mini language" that is used for processing
+  text. It is very good inserting values into HTML documents.
+* context - a dictionary that specifies which "variables" are to be
+  inserted into the template
+* render - the process of replacing placeholders in a template with the
+  template variables in the context
+* filter - a special type of function that is usable within a template
+  for a few different types of text and list transformations
+'''
+
+
+
+[slide]
+title=DEMO: Jinja
+editor=./demos/jinja_example.py
+terminal=./demos/
+
+
+[slide]
+title=ACTIVITY 3 - jinja
+editor=./activities/3_jinja.py
+
+
+[slide]
+title=SOLUTION 3 - jinja
+editor=./solutions/3_jinja.py
+terminal=./solutions/
+
+
+[slide]
+title=DEMO: Jinja Flow
+editor=./demos/jinja_example_flow.py
+terminal=./demos/
+
+
+[slide]
+title=ACTIVITY 4 - jinja templates
+editor=./activities/4_jinja_templates/build.py
+browser=./solutions/4_jinja_templates/output.html
+
+[slide]
+title=SOLUTION 4 - jinja templates
+editor=./solutions/4_jinja_templates/template.html
+browser=./solutions/4_jinja_templates/output.html
+
+

@@ -10,13 +10,34 @@ print('Challenge 1 -------------')
 
 
 class Patient:
-    def __init__(self, first_name):
+    def __init__(self, first_name, last_name):
         self.first_name = first_name
-        self.last_name = 'Idle'
+        self.last_name = last_name
         self.is_checked_in = False
 
+    def print_info(self):
+        for key in self.__dict__.keys():
+            print(key, ':', self.__dict__[key])
 
-eric = Patient('Eric')
+    def check_in(self):
+        self.is_checked_in = True
+
+    def nurse_check_up(self):
+        self.smokes = input('Does the patient smoke?')
+        self.drinks = input('Does the patient drink?')
+        self.bp = int(input('Patient blood pressure?'))
+        self.seen_nurse = True
+
+    def ask_for_int(self):
+        return int(input('Please enter a number: '))
+
+    def ask_for_bool(self):
+        resp = input('Please enter yes or no: ')
+        return resp.lower() in ("yes", "true", "t", "1", "y", "yup", "yeah", "sure")
+
+
+eric = Patient('Eric', 'Weiss')
+eric.print_info()
 
 
 
@@ -88,10 +109,3 @@ print('-------------')
 # "static methods". Make a static method called "load" that will restore the
 # Python object.
 # Hint: An easy way to do this is with the built-in module "pickle"
-
-
-
-
-
-
-

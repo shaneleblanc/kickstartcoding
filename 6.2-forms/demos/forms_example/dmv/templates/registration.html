@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Springfield DMV</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Springfield DMV</h1>
+    <img style="height: 200px" src="https://i.imgur.com/e0TsMa5.jpg" />
+
+    <div class="row">
+        <div class="col">
+            <h2>Register</h2>
+            <form action="/" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button>Submit</button>
+            </form>
+        </div>
+        <div class="col">
+            <h2>Recent registrations</h2>
+            {% for registration in registrations %}
+                <hr />
+                <h5>{{ registration.first_name }} {{ registration.last_name }}</h5>
+                {% for key, value in registration.items %}
+                    <p><strong>{{ key }}:</strong> {{ value }}</p>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+</html>

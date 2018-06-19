@@ -1,0 +1,316 @@
+[deck]
+readonly = true
+cssfile = ../basestyle.css
+
+[slide]
+title=Kickstart Coding - 6.2
+
+[slide]
+title=Forms
+
+
+[slide]
+title=Django review
+
+
+[slide]
+title=Django review
+markdown : '''
+In your own words...
+
+* ...what is a framework?
+* ...what is MVC?
+* ...what is an HTML form?
+* ...what how do POST forms differ from GET forms?
+
+For Django...
+
+* ...what are Views?
+* ...what are Templates?
+* ...what are Models?
+'''
+
+
+
+[slide]
+title=Django review
+markdown : '''
+In your own words...
+
+* ...what is a framework?
+    * A library that also involves patterns and traditionally structures for
+      your entire application
+* ...what is MVC?
+    * The "keep stuff separate" philophy, Django is an MVC framework because of
+      its separation into Models, Views, and Templates
+* ...what is an HTML form?
+    * The boxes you can type things into in HTML
+* ...what how do POST forms differ from GET forms?
+    * GET forms are for "read only operations", send data in the path of the
+      request, if you refresh it will send another request
+    * POST forms are for changing data, send data in BODY of request (not
+      path), if you refresh it will warn you before sending another request
+
+For Django...
+
+* ...what are Views?
+    * "Business logic" code, where the bulk of our python code goes in Django.
+      Views make decisions and renders the templates
+* ...what are Templates?
+    * HTML to display our site
+* ...what are Models?
+    * Code that stores, retrieves, validates data in the database
+'''
+
+
+
+[slide]
+title=ACTIVITY 1: dog sitting
+editor = ./activities/1_dogsit/instructions.txt
+
+
+[slide]
+title=REVIEW 1: dog sitting
+editor : '''
+./solutions/1_dogsit/dogsit/scheduling/views.py
+./solutions/1_dogsit/dogsit/dogsit/urls.py
+./solutions/1_dogsit/dogsit/scheduling/templates/*.html
+'''
+
+
+[slide]
+title=Kickstart Backend - Final Project
+
+
+[slide]
+title=Build what you always dreamed
+
+
+[slide]
+title=...but within reason
+markdown : '''
+![climbing](file://./images/walking_machine.gif)
+'''
+
+
+[slide]
+title=Milestones
+markdown : '''
+* Good news: No more new individual homeworks to be assigned!
+* Group projects are split into 4 milestones:
+    1. Group proposal
+    2. Template, wireframe, and API proof of concept
+    3. MVP
+    4. Presentation
+    5. Portfolio
+* Group formation: Want to grouped with another student? Submit a group request
+  **by next class**
+* Anyone who does not submit group requests will be assigned a group
+'''
+
+
+[slide]
+title=Milestone 1 - Proposal and initial roadmap
+markdown : '''
+1. Group information
+
+2. Software goal and concept
+
+4. Project specifications (incl. 1 or 2 wireframes)
+
+5. Challenges and unknowns
+
+6. Group roles
+
+### Due: Saturday's class for groups, Monday's class for final proposal
+'''
+
+
+[slide]
+title=Milestone 2 - Style & finalized roadmap
+markdown : '''
+1. "Click-through" template of core concepts
+
+2. Full wireframes of **all** screens
+
+3. Proof of concepts (example API data, core view logic)
+
+### Due: 1 week
+'''
+
+
+[slide]
+title=Milestone 3 - MVP
+markdown : '''
+1. Minimum Viable Product - core functionality working
+
+2. Should look nice and be pleasant to use
+
+3. Should be relatively bug free
+
+4. Fully launched to Heroku
+
+### Due: 2 weeks
+'''
+
+
+[slide]
+title=Milestone 4 - Presentations
+markdown : '''
+1. Slide-deck
+
+2. Spend these extra days adding extra polish
+
+3. Finish any stand-out features
+
+4. Ensure test-data is removed
+
+### Due: 2.5 weeks
+'''
+
+
+[slide]
+title=Milestone 5 - Portfolio (optional)
+markdown : '''
+1. Flesh out README.md with full description
+
+2. Buy domain, and/or think of logo and branding
+
+3. Add to resume
+
+4. Add any additional stand-out features
+
+### Due: 3+ weeks
+'''
+
+
+[slide]
+title=MVP
+
+
+[slide]
+title=Minimum Viable Product
+markdown : '''
+![climbing](file://./images/mvppyramid.png)
+'''
+
+
+[slide]
+title=Project questions?
+
+
+[slide]
+title=Brainstorming sesh
+markdown : '''
+* With the person next to you, spend a few minutes come up with at least 3
+  project ideas
+
+* Think about only *one* core feature that could be built
+
+* Be wary of ideas that require lots of user-supplied data
+
+* If you come up with more than 3, pick the 3 best.
+
+* One of you should send these out to chat
+
+![pyramid](file://./images/mvppyramid.png)
+'''
+
+
+
+[slide]
+title=Django Forms
+
+[slide]
+title=Django Forms
+markdown : '''
+
+Django comes with some handy tools that make it easier to create and validate
+forms
+
+### KEY TERMS
+* data validation - making sure data is correct (e.g. checking that an '@'
+  exists in an email)
+* django form - A set of helper tools in Django for generating and validating
+  HTML forms, and reporting back to the user what needs fixing
+* form field - Meant to represent a particular type of data
+* widget - the HTML representation of the form
+* csrf - "cross site request forgery", a type of hacking that is prevented with
+  a `{% csrf_token %}` in the template
+'''
+
+
+[slide]
+title=DEMO: Django Forms
+terminal = ./demos/forms_example/
+editor : '''
+./demos/forms_example/dmv/views.py
+./demos/forms_example/dmv/templates/*.html
+'''
+
+
+[slide]
+title=ACTIVITY 2: dog sit forms
+editor = ./activities/2_dogsit_forms/instructions.txt
+
+
+[slide]
+title=REVIEW 2: dog sit forms
+editor : '''
+./solutions/2_dogsit_forms/dogsit/scheduling/views.py
+./solutions/2_dogsit_forms/dogsit/dogsit/urls.py
+./solutions/2_dogsit_forms/dogsit/scheduling/templates/*.html
+'''
+
+
+[slide]
+title=Getting extra stuff
+
+[slide]
+title=Getting extra stuff
+browser = https://djangopackages.org/
+
+
+[slide]
+title=Getting extra stuff
+markdown : '''
+A lot of people have written nice add-ons for Django. The way Django breaks
+things down into "apps" assists with this. Let's try one out:
+
+`django-bootstrap4` - auto-generates bootstrap4 based forms from Django Forms.
+
+Installing is as easy as `pipenv install django-bootstrap4`
+
+https://github.com/zostera/django-bootstrap4
+'''
+
+
+[slide]
+title=DEMO: Using Django Packages
+terminal = ./demos/forms_example/
+editor : '''
+./demos/forms_example/forms_example/settings.py
+./demos/forms_example/dmv/views.py
+./demos/forms_example/dmv/templates/*.html
+'''
+
+
+[slide]
+title=ACTIVITY 3: dogsit enhance
+editor = ./activities/3_dogsit_enhance/instructions.txt
+
+[slide]
+title=REVIEW 3: dogsit enhance
+editor : '''
+./solutions/3_dogsit_enhance/dogsit/scheduling/views.py
+./solutions/3_dogsit_enhance/dogsit/dogsit/settings.py
+./solutions/3_dogsit_enhance/dogsit/dogsit/urls.py
+./solutions/3_dogsit_enhance/dogsit/scheduling/templates/*.html
+'''
+terminal = ./demos/forms_example/
+
+
+
+
+
+

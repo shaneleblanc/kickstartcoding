@@ -1,0 +1,59 @@
+1. First, create a new pipenv environment here:
+pipenv --python 3.6
+
+2. Install the necessary dependencies (presently, just Jinja2):
+pipenv shell
+pipenv install
+
+3. Now, run the script. Make sure it generates an output.html. Open the
+output.html file. It's lacking a lot!
+
+4. Examine (without modification) the build.py file, and the
+"wonderland.json" file. Can you understand what you are looking at?
+
+5. Follow these challenges to complete challenge. None of these
+challenges will require modifying the Python source code or the JSON
+file.
+
+
+Challenge 1:
+Change the template to include the book's author and title, correctly
+formatted, by including context variables with the {{ }} syntax. The
+title is already included, but is formatted poorly. You'll have to use
+the {{ book_title|title }} syntax to transform the title into the right
+case.
+
+
+Challenge 2:
+Add the chapter count above the table of contents.
+
+
+Challenge 3:
+Generate the table of contents. It should list each chapter name
+
+
+Challenge 4:
+Generate chapter headers underneath the table of contents for each
+chapter.
+
+
+Challenge 5:
+Generate paragraphs for each chapter, fully formatting the book.
+
+
+Bonus 1: Add a horizontal rule between all chapters. Hint: You will need
+to use "loop.last"
+
+Bonus 2: Make the first paragraph of each chapter be a "blockquote"
+instead of a p tag. Hint: You will need to use "loop.first"
+
+Bonus 3: Make it so that when you click on the table of contents links,
+it will go to that chapter.
+
+Advanced Bonus: Practice creating Jinja2 custom "filters". Make one that
+gets word count. Include the word count of each chapter after each ToC
+item. (This is the only one that will require modification of the Python
+sourcecode)
+
+Advanced Bonus: Still have time? Practice your CSS styling on this book.
+Can you improve on the this sakura theme?

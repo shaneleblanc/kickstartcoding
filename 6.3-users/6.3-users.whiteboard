@@ -1,0 +1,218 @@
+[deck]
+readonly = true
+cssfile = ../basestyle.css
+
+[slide]
+title=Kickstart Coding - 6.3
+
+
+[slide]
+title=Intro to Users & Databases
+
+
+[slide]
+title=ACTIVITY 1: faceboop
+editor = ./activities/1_faceboop/instructions.txt
+
+
+[slide]
+title=REVIEW 1: faceboop
+editor : '''
+./solutions/1_faceboop/faceboop/wall/models.py
+./solutions/1_faceboop/faceboop/wall/views.py
+./solutions/1_faceboop/faceboop/faceboop/urls.py
+./solutions/1_faceboop/faceboop/wall/templates/*.html
+'''
+
+[slide]
+title=Reminder: Project Milestone 1
+
+
+[slide]
+title=Remember: Group requests due by end of day!
+markdown : '''
+![group work](file://./images/group.gif)
+'''
+
+[slide]
+title=Start project idea brainstorming soon...
+markdown : '''
+Run ideas by instructors today and Monday to test feasibility.
+
+![group work](file://./images/group_ideas.gif)
+'''
+
+
+[slide]
+title=Persistence
+
+
+[slide]
+title=No, not this kind...
+markdown : '''
+![climbing](file://./images/climbing.gif)
+'''
+
+[slide]
+title=DISCUSSION: Persistence
+markdown : '''
+* Means: Storing data for later use.
+
+Spend a minute chatting with the person next to you the answer to the
+following questions:
+
+* What happens to data we store in variables when the program stops?
+
+* How could we make that data stay around?
+'''
+
+[slide]
+title=Persistence
+markdown : '''
+* Means: Storing data for later use.
+
+* Unless we store data somewhere, all our lists will go away when our
+  application stops.
+
+* We could save it to files, or we could save it to databases.
+
+* **Databases let us store data in a reliable and retrieve it in a quick way**
+'''
+
+
+
+[slide]
+title=Intro to Databases
+markdown : '''
+Term time!
+
+### KEY TERMS
+* persistence - storing data for use later
+* database - a piece of software that stores data in a fast and (typically)
+  strictly structured way
+* Sqlite - a simple and easy to use database system that is popular during
+  development and testing
+* migrate - syncing up a database - this means updating the database
+  structure to be in-line with our code
+* authentication - the act of making sure somebody is who they say they are
+  (e.g. a user system, "logging in")
+'''
+
+
+[slide]
+title=DEMO: Django Admin & Authentication
+terminal = ./demos/forms_example/
+editor : '''
+./demos/forms_example/dmv/views.py
+./demos/forms_example/dmv/templates/*.html
+'''
+
+
+[slide]
+title=ACTIVITY 2: faceboop users
+editor = ./activities/2_faceboop_users/instructions.txt
+
+
+[slide]
+title=REVIEW 2: faceboop users
+editor : '''
+./solutions/2_faceboop_users/faceboop/wall/views.py
+./solutions/2_faceboop_users/faceboop/faceboop/urls.py
+./solutions/2_faceboop_users/faceboop/wall/templates/*.html
+'''
+
+
+
+[slide]
+title=Intro to Models
+markdown : '''
+Term time!
+
+### Key terms
+* ORM - Object Relational Mapper - a set of tools to assist work with
+  databases in Python
+* model - A Model is a special type of class that uses the ORM to be able
+  to save its objects to a database.
+'''
+
+
+[slide]
+title=DEMO: Making a simple model
+terminal = ./demos/forms_example/
+editor : '''
+./demos/forms_example/dmv/views.py
+./demos/forms_example/dmv/templates/*.html
+'''
+
+
+[slide]
+title=ACTIVITY 3: faceboop models
+editor = ./activities/3_faceboop_models/instructions.txt
+
+
+[slide]
+title=REVIEW 3: faceboop models
+editor : '''
+./solutions/3_faceboop_models/faceboop/wall/views.py
+./solutions/3_faceboop_models/faceboop/faceboop/urls.py
+./solutions/3_faceboop_models/faceboop/wall/templates/*.html
+'''
+
+[slide]
+title=Starting Projects with Best Practices
+
+[slide]
+title=Intro to Cookiecutter
+markdown : '''
+> ![cookie cutter](file://./images/cookiecutter.jpg)
+
+* Cookiecutter is tool for starting projects according to industry
+  best-practices.
+
+* **For your group projects, it is optional, but recommended, to start off
+  using the cookiecutter for Django**
+
+* See `guides/cookiecutter.txt` for how to get going
+
+### Key terms
+
+* best practices - The way of doing things that is considered "correct" by
+  the software engineering professionals in a certain area
+'''
+
+[slide]
+title=Django Cookiecutter Advantages
+markdown : '''
+> ![cookie cutter](file://./images/cookiecutter.jpg)
+
+* Django Debug Toolbar installed and configured
+
+* A "starter" site made with Bootstrap 4, with a sign-up, email
+  confirmation, and log-in system
+
+* Distinct settings between local (testing) and production (launching to
+  the world).
+
+* Postgres, Procfile, and various configuration settings set up so you
+  can launch on Heroku.
+
+* Practice with using a "industry standard" Django set-up.
+
+* Downsides: It generates more files and boilerplate than the Django
+  projects we've been working with thus far.
+'''
+
+
+[slide]
+title=DEMO: Cookiecutter
+editor = ./guides/cookiecutter.txt
+terminal = ./demos/
+
+
+[slide]
+title=Brainstorm group projects!
+markdown : '''
+![mvp](file://./images/mvppyramid.png)
+'''
+
+

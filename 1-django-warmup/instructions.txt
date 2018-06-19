@@ -1,0 +1,30 @@
+In this activity we want to warm up our Django skills and make a simple
+website.
+
+----
+
+Challenge 1:
+Get the code working!
+1. Run "pipenv shell" to enable pipenv
+2. Run "pipenv install" to install dependencies from Pipfile (in this
+case, only Django)
+3. Run python manage.py runserver to run the Django Python server itself
+
+Now, visit localhost:8000 or 127.0.0.1:8000 (both will do the same
+thing).
+
+----
+
+Challenge 2:
+Your goal now is to create another page that is linked to from the home
+page, just as there is the about_me page.
+
+Modify the manage.py (but don't touch the boilerplate at the bottom!).
+
+----
+
+Challenge 3:
+Look at the solution for the final activity from last class. Can you
+incorporate Django templating? Create a "chat room" where you can enter
+a username and a message.
+

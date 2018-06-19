@@ -1,0 +1,59 @@
+As before, do one challenge at a time, and raise your hand if/when you
+get stuck!
+
+
+-------------------
+Challenge 1: Installing Django-Bootstrap4
+
+Get this code running, same as before. Then, do the following to install
+this 3rd party package:
+
+pipenv install django-bootstrap4
+
+Add to INSTALLED_APPS in your settings.py:
+
+'bootstrap4',
+
+
+Make sure stuff still runs without error.
+
+
+
+-------------------
+Challenge 2: Using Django-Bootstrap4
+
+Start with one template, such as the Sitter application template, and
+convert it to using the bootstrap4 forms package to render your forms.
+
+Below is the example code that is given to you by the documentation for
+django-bootstrap4.  Utilize this documentation to upgrade your forms to use
+this package:
+
+{% load bootstrap4 %}
+
+<form action="" method="POST" class="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    {% endbuttons %}
+</form>
+
+
+-------------------
+Challenge 3
+Do the same as Challenge 2, except for your dog form.
+
+
+
+-------------------
+Bonus Challenges:
+Spend you remaining time researching more packages from Django Packages. Can
+you enhance this page even further? Here are a few examples:
+
+1. Add in phone number or address validation
+2. Try to get "django debug toolbar" functioning (this is a cool thing we'll
+look at again later!)
+
+
+

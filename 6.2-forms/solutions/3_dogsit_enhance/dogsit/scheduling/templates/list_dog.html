@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+
+{% block content %}
+
+<h2>Add Dog Sitting Appointment</h2>
+
+<form action="." method="POST">
+    {% csrf_token %}
+    {% bootstrap_form form layout='horizontal' %}
+    {% buttons %}
+        <button class="btn btn-primary">Add dog sitting appointment</button>
+    {% endbuttons %}
+</form>
+
+{% endblock content %}

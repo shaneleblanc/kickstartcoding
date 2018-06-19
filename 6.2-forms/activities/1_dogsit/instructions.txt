@@ -1,0 +1,99 @@
+As before, do one challenge at a time, and raise your hand if/when you
+get stuck!
+
+
+-------------------
+Challenge 1:
+
+Get this code running. You should see DogSit.com site for dog sitting
+when it is fully working. Refer to the steps from previous activities if
+you get stuck.
+
+Generally, it requires three steps:
+pipenv --python 3.6
+pipenv shell
+pipenv install django
+
+Then finally:
+python manage.py runserver
+
+
+-------------------
+Challenge 2:
+
+Experiment with creating a dogs and sitters. Examine how all the code is
+working together. Discus with your neighbor the following concepts.
+
+1. See if you can explain how the template files relate to each other:
+Can you explain how base.html works, and how the other template files
+relate to it?
+
+Other templates are the blockcontent contained within the base html template.
+A subtemplate "extends" the base.html
+
+2. Can you explain how the sitter list gets "pre-populated" with test
+data?
+
+It pulls data from test_data.py
+
+3. Can you explain how the forms send POST requests to the server, and
+add data to the list?
+
+It grabs each of the form values, and assigns the values to a variable. Then, it
+builds an object containing the variables, and then appens that object to an array.
+
+
+-------------------
+Challenge 3:
+
+Time to get to work!  Add 3 new fields for the "add a dog" form input
+boxes that record the following:
+1. breed
+2. age
+3. notes
+The "notes" field should accept multiple lines. See the "address" field
+of sitter for an example.
+
+
+
+
+-------------------
+Challenge 4:
+
+See how you can enter in "garbage data" for date, start time, and
+duration? Checking the validity of data entered by users is called "form
+validation". Write in pseudocode how you might validate this data
+entered by the user. This functionality should also report back to the
+user when they entered something incorrect in these fields, giving them
+a chance to fix it.
+
+IF regex doesn't matchh...
+
+-------------------3
+Challenge 5:
+
+Implement the code for Challenge 5. This will require both Python and
+template changes (to report back to the user when something went wrong).
+
+
+
+-------------------
+Challenge 6:
+
+Age is the HTML input type of "number". This prevents the user from
+entering a non-number in the form. Can you figure out a way to "hack"
+this protection, and add in invalid ages to the backend?
+
+
+
+-------------------
+Advanced Challenge:
+
+How might you write the code to allow "booking" of the dog sitting
+appointments? This feature should exist as a button on each dog (each
+dog representing thus one appointment timeslot). When clicked, it takes
+the user to a new page, that lets them select which sitter booked for
+this dog.
+
+Write the pseudocode for this feature. If you have time, implement this
+feature.
